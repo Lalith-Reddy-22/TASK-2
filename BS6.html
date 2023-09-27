@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .invalid-input {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm.93-11h-1.86a.5.5 0 0 0 0 1h1.86a.5.5 0 0 0 0-1zM7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <form id="myForm">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+                <small class="text-danger" id="nameError" style="display: none;">* Name is required</small>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email">
+                <small class="text-danger" id="emailError" style="display: none;">* Email is required</small>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password">
+                <small class="text-danger" id="passwordError" style="display: none;">* Password is required</small>
+            </div>
+
+            <!-- Hobbies Dropdown -->
+            <div class="form-group">
+                <label for="hobbies">Hobbies</label>
+                <select class="form-control" id="hobbies">
+                    <option>Reading</option>
+                    <option>Traveling</option>
+                    <option>Gaming</option>
+                    <option>Cooking</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+        </form>
+    </div>
+
+    <!-- jQuery, Bootstrap JS and custom validation script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name");
+            let email = document.getElementById("email");
+            let password = document.getElementById("password");
+
+            if (!name.value) {
+                name.classList.add("invalid-input");
+                document.getElementById("nameError").style.display = "block";
+            } else {
+                name.classList.remove("invalid-input");
+                document.getElementById("nameError").style.display = "none";
+            }
+
+            if (!email.value) {
+                email.classList.add("invalid-input");
+                document.getElementById("emailError").style.display = "block";
+            } else {
+                email.classList.remove("invalid-input");
+                document.getElementById("emailError").style.display = "none";
+            }
+
+            if (!password.value) {
+                password.classList.add("invalid-input");
+                document.getElementById("passwordError").style.display = "block";
+            } else {
+                password.classList.remove("invalid-input");
+                document.getElementById("passwordError").style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

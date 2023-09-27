@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabetical Sort</title>
+</head>
+
+<body>
+    <h1>Multiplication and Division</h1>
+    <table>
+        <tr>
+            <td><label for="num1">Enter the 1st number: </label></td>
+            <td><input type="number" id="num1"></td>
+        </tr>
+        <tr>
+            <td><label for="num2">Enter the 2nd number: </label></td>
+            <td><input type="number" id="num2"></td>
+        </tr>
+        <tr>
+            <td><button onclick="Divide()">Divide</button></td>
+            <td><button onclick="multiply()">Multiply</button></td>
+        </tr>
+    </table>
+    <p id="calculate"></p>
+
+    <script>
+        function multiply() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please enter valid numbers.");
+                return;
+            }
+            const calculate = num1 * num2;
+            const resultElement = document.getElementById('calculate');
+            resultElement.textContent = `Multiplication Result: ${calculate}`;
+        }
+
+        function Divide() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please enter valid numbers.");
+                return;
+            }
+            if (num2 === 0) {
+                alert("Division by zero is not allowed.");
+                return;
+            }
+            const calculate = num1 / num2;
+            const resultElement = document.getElementById('calculate');
+            resultElement.textContent = `Division Result: ${calculate}`;
+        }
+    </script>
+</body>
+
+</html>

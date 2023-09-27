@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabetical Sort</title>
+</head>
+
+<body>
+    <h1>Numerical Sort</h1>
+    <label for="inputnum">Enter a number: </label>
+    <input type="number" id="inputnum">
+    <button onclick="sortnum()">Sort</button>
+    <p id="sortednum"></p>
+
+    <script>
+        function sortnum() {
+            const inputElement = document.getElementById('inputnum');
+            const inputnum = inputElement.value;
+            if (inputnum.trim() === "") {
+                alert("Please enter a valid string.");
+                return;
+            }
+            const sortednum = inputnum.split('').sort().join('');
+            const sortednumElement = document.getElementById('sortednum');
+            sortednumElement.textContent = `Sorted number: ${sortednum}`;
+        }
+    </script>
+</body>
+
+</html>

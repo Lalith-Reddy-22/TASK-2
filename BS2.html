@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Builderz - Construction Company Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Construction Company Website Template" name="keywords">
+    <meta content="Construction Company Website Template" name="description">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #030f27;
+        }
+
+        a {
+            color: #666666;
+            transition: .3s;
+        }
+
+        a:hover,
+        a:active,
+        a:focus {
+            color: #fdbe33;
+            outline: none;
+            text-decoration: none;
+        }
+
+        .btn:focus {
+            box-shadow: none;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1366px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        .top-bar {
+            position: relative;
+            height: 90px;
+            background: #fdbe33;
+        }
+
+        .top-bar .logo {
+            padding: 15px 0;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .top-bar .logo h1 {
+            margin: 0;
+            color: #030f27;
+            font-size: 60px;
+            line-height: 60px;
+            font-weight: 700;
+        }
+
+        .top-bar .top-bar-text h3 {
+            margin: 0 0 5px 0;
+            color: #030f27;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .top-bar .top-bar-text p {
+            margin: 0;
+            color: #030f27;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        @media (min-width: 992px) {
+            .top-bar {
+                padding: 0 60px;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .top-bar .logo {
+                text-align: center;
+            }
+        }
+
+
+        .nav-bar {
+            position: relative;
+            background: #fdbe33;
+        }
+
+        .nav-bar .navbar {
+            height: 100%;
+            background: #030f27 !important;
+        }
+
+        .navbar-dark .navbar-nav .nav-link,
+        .navbar-dark .navbar-nav .nav-link:focus,
+        .navbar-dark .navbar-nav .nav-link:hover,
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: #ffffff;
+        }
+
+        .nav-bar .btn {
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 0;
+        }
+
+        @media (min-width: 992px) {
+            .nav-bar {
+                padding: 0 75px;
+            }
+
+            .nav-bar.nav-sticky {
+                padding: 0;
+            }
+
+            .nav-bar .navbar {
+                padding: 20px;
+            }
+
+            .nav-bar .navbar-brand {
+                display: none;
+            }
+
+            .nav-bar a.nav-link {
+                padding: 8px 15px;
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 170px);
+            min-height: 400px;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .carousel .carousel-inner,
+        .carousel .carousel-item {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .carousel .carousel-caption {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: calc(100vh - 170px);
+            min-height: 400px;
+        }
+
+        .carousel .carousel-caption p {
+            color: #ffffff;
+            font-size: 30px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .carousel .carousel-caption h1 {
+            color: #ffffff;
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+
+        .carousel .carousel-caption .btn {
+            padding: 15px 35px;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #ffffff;
+            background: transparent;
+            border: 2px solid #ffffff;
+            border-radius: 0;
+            transition: .3s;
+        }
+
+        .feature {
+            position: relative;
+            margin-bottom: 45px;
+        }
+
+        .feature .col-md-12 {
+            background: #030f27;
+        }
+
+        .feature .col-md-12:nth-child(2n) {
+            color: #030f27;
+            background: #fdbe33;
+        }
+
+        .feature .feature-item {
+            min-height: 250px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .feature .feature-text {
+            padding-left: 30px;
+        }
+
+        .feature .feature-text h3 {
+            margin: 0 0 10px 0;
+            color: #fdbe33;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .feature .feature-text p {
+            margin: 0;
+            color: #fdbe33;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .feature .col-md-12:nth-child(2n),
+        .feature .col-md-12:nth-child(2n) h3,
+        .feature .col-md-12:nth-child(2n) p {
+            color: #030f27;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="logo">
+                            <a href="BS2.html">
+                                <h1>Builderz</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-text">
+                                        <h3>Opening Hour</h3>
+                                        <p>Mon - Fri, 8:00 - 9:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-text">
+                                        <h3>Call Us</h3>
+                                        <p>+012 345 6789</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="top-bar-item">
+                                    <div class="top-bar-text">
+                                        <h3>Email Us</h3>
+                                        <p>info@example.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="#" class="nav-item nav-link">Home</a>
+                            <a href="#" class="nav-item nav-link">About</a>
+                            <a href="#" class="nav-item nav-link">Service</a>
+                            <a href="#" class="nav-item nav-link">Team</a>
+                            <a href="#" class="nav-item nav-link">Project</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle">Pages</a>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <div class="ml-auto">
+                            <a class="btn" href="#">Get A Quote</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDnQcAOkEm-TC3cid2KDkEGDDsCWe5yPH7gw&usqp=CAU"
+                        alt="Carousel Image">
+                    <div class="carousel-caption">
+                        <p>We Are Professional</p>
+                        <h1>For Your Dream Project</h1>
+                        <a class="btn animated fadeInUp" href="#">Get A Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature wow fadeInUp">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-12">
+                    <div class="feature-item">
+                        <div class="feature-text">
+                            <h3>Expert Worker</h3>
+                            <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="feature-item">
+                        <div class="feature-text">
+                            <h3>Quality Work</h3>
+                            <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="feature-item">
+                        <div class="feature-text">
+                            <h3>24/7 Support</h3>
+                            <p>Lorem ipsum dolor sit amet elit. Phasus nec pretim ornare velit non</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <form class="well form-horizontal" action="" method="post" id="contact_form">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>
+                    <center>
+                        <h2><b>Registration Form</b></h2>
+                    </center>
+                </legend><br>
+                <!-- Text input - First Name -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="first_name">First Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" id="first_name" placeholder="First Name" class="form-control"
+                                type="text">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input - Last Name -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="last_name">Last Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" id="last_name" placeholder="Last Name" class="form-control"
+                                type="text">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input - E-Mail -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email">E-Mail</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" id="email" placeholder="E-Mail Address" class="form-control"
+                                type="text">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input - Contact No. -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="contact_no">Contact No.</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input name="contact_no" id="contact_no" placeholder="(805)078-8075" class="form-control"
+                                type="text">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input - Address -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="Address">Address</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="Address" id="Address" placeholder="Address" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input - City-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="City">City</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="City" id="City" placeholder="City" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="State">State</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select name="State" id="State" class="form-control selectpicker">
+                                <option value="Please select your state">Please select your state</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Do you have hosting?</label>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="Do you have hosting?" value="Yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="Do you have hosting?" value="No">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input - Project discription-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="description">Project Description</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <textarea name="description" id="description" placeholder="Project description"
+                                class="form-control" rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4"><br>
+                        <button type="submit" class="btn btn-warning">SUBMIT <span
+                                class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Include Bootstrap Validator -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css"
+        rel="stylesheet">
+
+    <!-- Your Bootstrap Validator code -->
+    <script>
+        $(document).ready(function () {
+            $('#contact_form').bootstrapValidator({
+                message: 'This value is not valid',
+
+                fields: {
+                    first_name: {
+                        validators: {
+                            stringLength: {
+                                min: 2,
+                                message: 'First Name must be at least 2 characters long'
+                            },
+                            notEmpty: {
+                                message: 'Please enter your First Name'
+                            }
+                        }
+                    },
+                    last_name: {
+                        validators: {
+                            stringLength: {
+                                min: 2,
+                                message: 'Last Name must be at least 2 characters long'
+                            },
+                            notEmpty: {
+                                message: 'Please enter your Last Name'
+                            }
+                        }
+                    },
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please enter your Email Address'
+                            },
+                            emailAddress: {
+                                message: 'Please enter a valid Email Address'
+                            }
+                        }
+                    },
+                    contact_no: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please enter your Contact No.'
+                            }
+                        }
+                    },
+                    Address: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please enter your Address'
+                            }
+                        }
+                    },
+                    City: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please enter your City'
+                            }
+                        }
+                    },
+                    State: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please select your State'
+                            }
+                        }
+                    },
+                    "Do you have hosting?": {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please select an option'
+                            }
+                        }
+                    },
+                    description: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Please provide a Project Description'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
